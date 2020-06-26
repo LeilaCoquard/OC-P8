@@ -1,0 +1,17 @@
+- Installation 
+    - installer npm, si besoin
+    - Faire "npm install" pour installer l'ensemble des modules
+- Fonctionnement du site
+    Le site permet de créer une liste de tâches, appelée "todolist", pour une meilleur gestion de ses tâches à effectuer au quotidien.
+    Les fonctionnalités du site sont :
+        - on peut créer une nouvelle tache (cliquer dans « what needs to be done ? » et écrire votre tâche. Appuyer sur entrée pour valider et enregistrer la tâche. La tâche apparait dans la todolist.)
+        - on peut éditer une tâche (double-cliquer sur la tâche que vous voulez éditer. Modifier et appuyer sur entrée pour valider)
+        - on peut indiqué si la tache a été complétée (appuyer sur le rond à gauche de la tâche)
+        - on peut supprimer une tache (en survolant la tâche, une croix apparait à droite. Appuyer dessus pour supprimer la tâche dans la liste)
+        - on peut supprimer toutes les taches complétées (appuyer sur "clear completed en bas à droite")
+        - on peut visualiser toutes les taches, ou uniquement les taches complétées, ou les taches à faire (naviguer sur "all", "active", "completed")
+- Le code
+    Cette application a été fait en html/css/javascript et a une structure MVC (Model-Vue-Controller)
+    arborescence des fichiers
+    bbd : avec localStorage
+- Audit
