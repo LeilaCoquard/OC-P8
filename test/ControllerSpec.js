@@ -90,24 +90,22 @@ describe('controller', function () {
 
 		it('should show active entries', function () {
 			// TODO: write test
-			var todo1 = {title: 'my todo 1', completed: false};
-			// var todo2 = {title: 'my todo 2', completed: true};
-			setUpModel([todo1]);
+			var todo = {title: 'my todo 1', completed: false};
+			setUpModel([todo]);
 
 			subject.setView('#/active');
 
-			expect(view.render).toHaveBeenCalledWith('showEntries', [todo1]);
+			expect(view.render).toHaveBeenCalledWith('showEntries', [todo]);
 		});
 
 		it('should show completed entries', function () {
 			// TODO: write test
-			// var todo1 = {title: 'my todo 1', completed: false};
-			var todo2 = {title: 'my todo 2', completed: true};
-			setUpModel([todo2]);
+			var todo = {title: 'my todo 2', completed: true};
+			setUpModel([todo]);
 			
 			subject.setView('#/completed');
 			
-			expect(view.render).toHaveBeenCalledWith('showEntries', [todo2]);
+			expect(view.render).toHaveBeenCalledWith('showEntries', [todo]);
 		});
 	});
 
