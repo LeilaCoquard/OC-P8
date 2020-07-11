@@ -90,7 +90,7 @@
      	// 	newId += charset.charAt(Math.floor(Math.random() * charset.length));
 		// }
 
-		var newId = Date.now();
+		var newId = Date.now(); //Bug 2 !
 		
 		// If an ID was actually given, find the item and update each property
 		if (id) {
