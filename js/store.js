@@ -126,19 +126,22 @@
 	Store.prototype.remove = function (id, callback) {
 		var data = JSON.parse(localStorage[this._dbName]);
 		var todos = data.todos;
-		var todoId;
 		
-		for (var i = 0; i < todos.length; i++) {
-			if (todos[i].id == id) {
-				todoId = todos[i].id;
-			}
-		}
+		// ANCIEN CODE
+		// for (var i = 0; i < todos.length; i++) {
+		// 	if (todos[i].id == id) {
+		// 		todoId = todos[i].id;
+		// 	}
+		// }
 
-		for (var i = 0; i < todos.length; i++) {
-			if (todos[i].id == todoId) {
-				todos.splice(i, 1);
-			}
-		}
+		// for (var i = 0; i < todos.length; i++) {
+		// 	if (todos[i].id == todoId) {
+		// 		todos.splice(i, 1);
+		// 	}
+		// }
+
+		var todoId = todos.findIndex(i => i.id === id);
+		todos.splice( todoId,1);
 
 		localStorage[this._dbName] = JSON.stringify(data);
 		callback.call(this, todos);
